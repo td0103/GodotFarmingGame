@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://de0fbyjusv0f2"]
+
+[ext_resource type="Script" uid="uid://b8g5loxm8nnsv" path="res://Scenes/UI/Inventory/inventory_ui.gd" id="1_5k3c8"]
+[ext_resource type="PackedScene" uid="uid://bfmq8u8thu3rj" path="res://Scenes/UI/Inventory/inventory.tscn" id="1_tlqlm"]
+[ext_resource type="Resource" uid="uid://chk2h8owga51l" path="res://Scenes/Data/Inventory/player_inventory.tres" id="2_5k3c8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wi6cd"]
+bg_color = Color(0.5882353, 0.5882353, 0.5882353, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[node name="InventoryUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5k3c8")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wi6cd")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Inventory" parent="PanelContainer/MarginContainer" instance=ExtResource("1_tlqlm")]
+layout_mode = 2
+data = ExtResource("2_5k3c8")

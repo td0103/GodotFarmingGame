@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm8i00ft5o7jx"]
+
+[ext_resource type="PackedScene" uid="uid://de0fbyjusv0f2" path="res://Scenes/UI/Inventory/inventory_ui.tscn" id="1_5yx73"]
+[ext_resource type="Script" uid="uid://dy8re47ny17yh" path="res://Scenes/UI/ShopUI/shop_sell_ui.gd" id="1_igiqw"]
+[ext_resource type="PackedScene" uid="uid://4subrx7or0rs" path="res://Scenes/UI/ConfirmUI/shop_sell_confirm_ui.tscn" id="2_igiqw"]
+
+[node name="ShopSellUI" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_igiqw")
+
+[node name="InventoryUI" parent="." node_paths=PackedStringArray("confirm_ui") instance=ExtResource("1_5yx73")]
+offset_top = 50.0
+confirm_ui = NodePath("../ShopSellConfirmUI")
+
+[node name="ShopSellConfirmUI" parent="." instance=ExtResource("2_igiqw")]
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -33.0
+offset_top = -23.0
+offset_right = 33.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "戻る: Esc"

@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvv6x0112ls7w"]
+
+[ext_resource type="PackedScene" uid="uid://btp3bwflhxhyu" path="res://Scenes/UI/HUD/hotbar_ui.tscn" id="1_h02we"]
+[ext_resource type="Script" uid="uid://tfwmx6x4obg3" path="res://Scenes/UI/HUD/player_hud.gd" id="1_j1o0q"]
+[ext_resource type="PackedScene" uid="uid://b5drjtca2hdiw" path="res://Scenes/UI/HUD/time_ui.tscn" id="1_p053d"]
+
+[node name="PlayerHUD" type="CanvasLayer"]
+script = ExtResource("1_j1o0q")
+
+[node name="TimeUI" parent="." instance=ExtResource("1_p053d")]
+
+[node name="HotbarUI" parent="." instance=ExtResource("1_h02we")]
+
+[node name="TipsUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TipsUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -98.5
+offset_top = -40.0
+offset_right = 98.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="TipsUI/HBoxContainer"]
+layout_mode = 2
+text = "ポーズ: Esc"
+
+[node name="Label2" type="Label" parent="TipsUI/HBoxContainer"]
+layout_mode = 2
+text = "インタラクト: E"

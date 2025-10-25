@@ -1,0 +1,183 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2y18y57bkcmd"]
+
+[ext_resource type="Script" uid="uid://bnb1vno47hlyx" path="res://Scenes/UI/PauseMenu/pause_ui.gd" id="1_wtndc"]
+[ext_resource type="PackedScene" uid="uid://de0fbyjusv0f2" path="res://Scenes/UI/Inventory/inventory_ui.tscn" id="2_2ts85"]
+[ext_resource type="PackedScene" uid="uid://busqifn4twmrk" path="res://Scenes/UI/ConfirmUI/pause_confirm_ui.tscn" id="3_t3nwl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rbpvs"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[node name="PauseUI" type="CanvasLayer"]
+process_mode = 3
+layer = 10
+script = ExtResource("1_wtndc")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19607843, 0.19607843, 0.19607843, 0.39215687)
+
+[node name="TabContainer" type="TabContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_alignment = 1
+current_tab = 1
+tab_focus_mode = 0
+
+[node name="Inventory" parent="Control/TabContainer" node_paths=PackedStringArray("confirm_ui") instance=ExtResource("2_2ts85")]
+visible = false
+layout_mode = 2
+confirm_ui = NodePath("../../../PauseConfirmUI")
+metadata/_tab_index = 0
+
+[node name="Control" type="Control" parent="Control/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/TabContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rbpvs")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/TabContainer/Control/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/TabContainer/Control/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "右:"
+
+[node name="Label2" type="Label" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "D"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "左:"
+
+[node name="Label2" type="Label" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "A"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "上:"
+
+[node name="Label2" type="Label" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "W"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "下:"
+
+[node name="Label2" type="Label" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "S"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "インタラクト:"
+
+[node name="Label2" type="Label" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "E"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer6"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "UI操作:"
+
+[node name="Label2" type="Label" parent="Control/TabContainer/Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "矢印キー"
+
+[node name="Control2" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Control2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Control/Control2/HBoxContainer"]
+layout_mode = 2
+text = "タブ1: Key 1"
+
+[node name="Label2" type="Label" parent="Control/Control2/HBoxContainer"]
+layout_mode = 2
+text = "タブ2: Key 2"
+
+[node name="Label3" type="Label" parent="Control/Control2/HBoxContainer"]
+layout_mode = 2
+text = "戻る: Esc"
+
+[node name="PauseConfirmUI" parent="." instance=ExtResource("3_t3nwl")]
+visible = false

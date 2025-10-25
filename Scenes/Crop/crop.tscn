@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b73thc4vl8gsh"]
+
+[ext_resource type="Script" uid="uid://clkq5g7j15xm" path="res://Scenes/Crop/crop.gd" id="1_ao4qs"]
+[ext_resource type="Texture2D" uid="uid://b8758584den01" path="res://Assets/tiny_realm_asset_pack_free/farm/crops/crops.png" id="2_ou5ju"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmlnw"]
+atlas = ExtResource("2_ou5ju")
+region = Rect2(48, 0, 16, 16)
+
+[node name="Crop" type="Node2D"]
+script = ExtResource("1_ao4qs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+texture = SubResource("AtlasTexture_fmlnw")

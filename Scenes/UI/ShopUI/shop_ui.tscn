@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://pkjw45x5ifm4"]
+
+[ext_resource type="Script" uid="uid://8wh41wcbgxsw" path="res://Scenes/UI/ShopUI/shop_ui.gd" id="1_2y0nj"]
+[ext_resource type="PackedScene" uid="uid://bm8i00ft5o7jx" path="res://Scenes/UI/ShopUI/shop_sell_ui.tscn" id="2_2y0nj"]
+
+[node name="ShopUI" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_2y0nj")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -33.0
+offset_right = 20.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonBuy" type="Button" parent="Control/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "買う"
+
+[node name="ButtonSell" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "売る"
+
+[node name="ButtonBack" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "戻る"
+
+[node name="ShopSellUI" parent="." instance=ExtResource("2_2y0nj")]
+visible = false
+
+[connection signal="pressed" from="Control/VBoxContainer/ButtonBuy" to="." method="_on_button_buy_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/ButtonSell" to="." method="_on_button_sell_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/ButtonBack" to="." method="_on_button_back_pressed"]

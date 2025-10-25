@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="SeedData" load_steps=9 format=3 uid="uid://c5252mga5mbuf"]
+
+[ext_resource type="Resource" uid="uid://sammyaloy03d" path="res://Scenes/Data/Item/crop_carrot.tres" id="1_0u0jo"]
+[ext_resource type="Script" uid="uid://j1r1b7p87yc1" path="res://Scenes/Data/Item/seed_data.gd" id="1_r182j"]
+[ext_resource type="Texture2D" uid="uid://b8758584den01" path="res://Assets/tiny_realm_asset_pack_free/farm/crops/crops.png" id="1_xaxsp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0u0jo"]
+atlas = ExtResource("1_xaxsp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u68mx"]
+atlas = ExtResource("1_xaxsp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdhgg"]
+atlas = ExtResource("1_xaxsp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdl4h"]
+atlas = ExtResource("1_xaxsp")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wksqo"]
+atlas = ExtResource("1_xaxsp")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_r182j")
+crop_data = ExtResource("1_0u0jo")
+growth_texture = Array[AtlasTexture]([SubResource("AtlasTexture_0u0jo"), SubResource("AtlasTexture_u68mx"), SubResource("AtlasTexture_kdhgg"), SubResource("AtlasTexture_gdl4h")])
+name = "carrot seed"
+description = "This is carrot seed."
+icon_texture = SubResource("AtlasTexture_wksqo")
+metadata/_custom_type_script = "uid://j1r1b7p87yc1"

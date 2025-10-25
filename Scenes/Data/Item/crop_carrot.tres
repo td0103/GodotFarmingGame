@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=4 format=3 uid="uid://sammyaloy03d"]
+
+[ext_resource type="Script" uid="uid://b3a1kol1b0jv4" path="res://Scenes/Data/Item/crop_data.gd" id="1_3hqn4"]
+[ext_resource type="Texture2D" uid="uid://y2p4e3mrehxs" path="res://Assets/tiny_realm_asset_pack_free/farm/crops/crop_icons.png" id="1_ssg06"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrc86"]
+atlas = ExtResource("1_ssg06")
+region = Rect2(0, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_3hqn4")
+name = "carrot"
+description = "This is carrot."
+icon_texture = SubResource("AtlasTexture_wrc86")
+metadata/_custom_type_script = "uid://b3a1kol1b0jv4"

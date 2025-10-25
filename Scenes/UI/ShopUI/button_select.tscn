@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf14wki04jctr"]
+
+[ext_resource type="Script" uid="uid://y2ccuqh5mg04" path="res://Scenes/UI/ShopUI/button_select.gd" id="1_xxltf"]
+
+[node name="ButtonSelect" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "1個"
+script = ExtResource("1_xxltf")

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsiu5rs08t7eb"]
+
+[ext_resource type="PackedScene" uid="uid://pkjw45x5ifm4" path="res://Scenes/UI/ShopUI/shop_ui.tscn" id="1_ahcct"]
+[ext_resource type="Script" uid="uid://djm7al76fu6xp" path="res://Scenes/UI/ui.gd" id="1_c7mb3"]
+[ext_resource type="PackedScene" uid="uid://d2y18y57bkcmd" path="res://Scenes/UI/PauseMenu/pause_ui.tscn" id="3_fo61o"]
+
+[node name="UI" type="CanvasLayer"]
+process_mode = 3
+layer = 10
+script = ExtResource("1_c7mb3")
+
+[node name="ShopUI" parent="." instance=ExtResource("1_ahcct")]
+layer = 10
+visible = false
+
+[node name="PauseUI" parent="." instance=ExtResource("3_fo61o")]
+visible = false
+
+[node name="LabelMoney" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -103.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "所持金: 0"

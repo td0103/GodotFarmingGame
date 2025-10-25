@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=7 format=3 uid="uid://chk2h8owga51l"]
+
+[ext_resource type="Script" uid="uid://qvsxvpmf6e7t" path="res://Scenes/Data/Inventory/inventory_data.gd" id="1_gfa6d"]
+[ext_resource type="Script" uid="uid://bv83pxo2lke0d" path="res://Scenes/Data/Inventory/slot_data.gd" id="2_vww0w"]
+[ext_resource type="Resource" uid="uid://c5252mga5mbuf" path="res://Scenes/Data/Item/seed_carrot.tres" id="3_6ivnn"]
+[ext_resource type="Resource" uid="uid://sammyaloy03d" path="res://Scenes/Data/Item/crop_carrot.tres" id="4_u8jom"]
+
+[sub_resource type="Resource" id="Resource_veoi1"]
+script = ExtResource("2_vww0w")
+item_data = ExtResource("3_6ivnn")
+quantity = 50
+metadata/_custom_type_script = "uid://bv83pxo2lke0d"
+
+[sub_resource type="Resource" id="Resource_jkrsj"]
+script = ExtResource("2_vww0w")
+item_data = ExtResource("4_u8jom")
+quantity = 30
+metadata/_custom_type_script = "uid://bv83pxo2lke0d"
+
+[resource]
+script = ExtResource("1_gfa6d")
+slots = Array[ExtResource("2_vww0w")]([SubResource("Resource_veoi1"), SubResource("Resource_jkrsj"), null, null, null, null, null, null, null, null])
+metadata/_custom_type_script = "uid://qvsxvpmf6e7t"

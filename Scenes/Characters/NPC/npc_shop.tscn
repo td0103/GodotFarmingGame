@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbhlh23qme7ih"]
+
+[ext_resource type="PackedScene" uid="uid://bgs5j1f808q5l" path="res://Scenes/Interact/interaction_area.tscn" id="1_3ntst"]
+[ext_resource type="Script" uid="uid://bcb6m8jh5lwp2" path="res://Scenes/Characters/NPC/npc_shop.gd" id="1_3004n"]
+[ext_resource type="Texture2D" uid="uid://bl0dkce3rcex1" path="res://Assets/tiny_realm_asset_pack_free/characters/player/character_spritesheet.png" id="2_kcv2q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_of5sn"]
+atlas = ExtResource("2_kcv2q")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjc0y"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2jmq"]
+size = Vector2(24, 24)
+
+[node name="NPCShop" type="CharacterBody2D"]
+script = ExtResource("1_3004n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -9)
+texture = SubResource("AtlasTexture_of5sn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_jjc0y")
+
+[node name="InteractionArea" parent="." instance=ExtResource("1_3ntst")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_e2jmq")

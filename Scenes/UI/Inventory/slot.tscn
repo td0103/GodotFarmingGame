@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://uhhp5odun6l0"]
+
+[ext_resource type="Script" uid="uid://galr57rt1qd6" path="res://Scenes/UI/Inventory/slot.gd" id="1_y1ei6"]
+[ext_resource type="Texture2D" uid="uid://y2p4e3mrehxs" path="res://Assets/tiny_realm_asset_pack_free/farm/crops/crop_icons.png" id="2_qfn4a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kajyt"]
+atlas = ExtResource("2_qfn4a")
+region = Rect2(0, 16, 16, 16)
+
+[node name="Slot" type="Button"]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_y1ei6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_kajyt")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_left = 4.0
+offset_top = -5.0
+offset_right = 32.0
+offset_bottom = 18.0
+text = "x90"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

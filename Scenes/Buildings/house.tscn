@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3appr46slhvu"]
+
+[ext_resource type="Texture2D" uid="uid://brrcrd1ktdk6u" path="res://Assets/tiny_realm_asset_pack_free/buildings/houses.png" id="1_siy1q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6h3i"]
+atlas = ExtResource("1_siy1q")
+region = Rect2(8, 8, 96, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4ch1"]
+size = Vector2(90, 90)
+
+[node name="House" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -53)
+texture = SubResource("AtlasTexture_i6h3i")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -46)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_d4ch1")
