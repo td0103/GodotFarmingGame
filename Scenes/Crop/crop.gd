@@ -23,7 +23,6 @@ func update_texture():
 
 func _on_interact():
 	if is_grown:
-		print("harvest")
 		PlayerManager.inventory_data.add_item(seed_data, 10)
 		PlayerManager.inventory_data.add_item(seed_data.crop_data, 10)
 		queue_free()

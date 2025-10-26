@@ -1,6 +1,6 @@
 class_name Inventory extends GridContainer
 
-const SLOT = preload("res://Scenes/UI/Inventory/slot.tscn")
+const SLOT = preload("res://Scenes/UI/InventoryUI/slot.tscn")
 @export var data: InventoryData
 var _on_slot_action: Callable = func():
 	pass
@@ -25,17 +25,4 @@ func update_inventory():
 		slot.slot_data = data.slots[i]
 
 func _on_slot_selected(slot: Slot):
-	#print(slot.slot_index)
-	#if slot.slot_data:
 	_on_slot_action.call(slot)
-
-#func switch_slot(index: int):
-	#if first_selected == -1:
-		#first_selected = index
-	#else:
-		#data.swap_slot(first_selected, index)
-		#first_selected = -1
-		#update_inventory()
-
-#func _on_slot_selected(index: int):
-	#print(index)

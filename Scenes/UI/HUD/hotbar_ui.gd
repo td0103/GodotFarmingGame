@@ -4,7 +4,6 @@ extends Control
 
 func _ready() -> void:
 	Ui.hidden.connect(update_slot)
-	#slot.disabled = true
 
 func update_slot():
 	var data = PlayerManager.inventory_data

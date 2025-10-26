@@ -2,7 +2,6 @@ extends Control
 
 @onready var label: Label = $Label
 @onready var color_rect: ColorRect = $ColorRect
-#@onready var anim: AnimationPlayer = $AnimationPlayer
 var day_length: float = 2.0 * 5
 var night_length: float = 1.0 * 5
 var total_day_length: float = day_length + night_length

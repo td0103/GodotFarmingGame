@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://uhhp5odun6l0"]
 
-[ext_resource type="Script" uid="uid://galr57rt1qd6" path="res://Scenes/UI/Inventory/slot.gd" id="1_y1ei6"]
+[ext_resource type="Script" uid="uid://galr57rt1qd6" path="res://Scenes/UI/InventoryUI/slot.gd" id="1_y1ei6"]
 [ext_resource type="Texture2D" uid="uid://y2p4e3mrehxs" path="res://Assets/tiny_realm_asset_pack_free/farm/crops/crop_icons.png" id="2_qfn4a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kajyt"]

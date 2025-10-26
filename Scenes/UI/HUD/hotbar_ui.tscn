@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://btp3bwflhxhyu"]
 
-[ext_resource type="PackedScene" uid="uid://uhhp5odun6l0" path="res://Scenes/UI/Inventory/slot.tscn" id="1_an0tc"]
+[ext_resource type="PackedScene" uid="uid://uhhp5odun6l0" path="res://Scenes/UI/InventoryUI/slot.tscn" id="1_an0tc"]
 [ext_resource type="Script" uid="uid://dxnhd2r0cvucc" path="res://Scenes/UI/HUD/hotbar_ui.gd" id="1_coh4l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_coh4l"]

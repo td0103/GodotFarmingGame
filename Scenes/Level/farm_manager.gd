@@ -26,10 +26,6 @@ func _ready() -> void:
 		tile_info[cell].watered = false
 	interaction_area.interact = Callable(self, "_on_interact")
 
-#func _unhandled_input(event: InputEvent) -> void:
-	#if event.is_action_pressed("test"):
-		#_on_interact()
-
 func _on_interact():
 	var cell = tile_map_layer.local_to_map(to_local(PlayerManager.player.global_position))
 	var atlas_coord = tile_map_layer.get_cell_atlas_coords(cell)
