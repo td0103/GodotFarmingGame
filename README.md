@@ -49,6 +49,7 @@ FarmManagerのTileInfo(TileMapの各cellの情報を登録)に作物の情報を
 2D Action RPGの様々な機能の実装を解説している. 何か実装したいことがあったら, このシリーズに似た機能がないか探した.
 
 - Zenva, [GODOT のファーミング RPG チュートリアル - 完全なミニコース](https://www.youtube.com/watch?v=LUg2XZNM4Qk)\
-TileMapのcellにcellの状態(土が乾いているか湿っているか)や作物があるかないかの情報を持たせるFarmManagerの解説が参考になった. それ以外は参考にしていない.
+TileMapのcellにcellの状態(土が乾いているか湿っているか)や作物があるかないかの情報を持たせるFarmManagerの解説が参考になった.
+
 - ChatGPT\
 わからないことがあったり, エラーが出たら利用した. 参考になるものは真似をした. たまにもっと良い方法がありそうな実装を提案されるので, そのときはYoutubeの動画を検索して, いいとこ取りをした
