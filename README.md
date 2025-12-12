@@ -7,6 +7,7 @@ Godotで農業ゲームを作成しました. 今後ゲームの要素が増え�
 - [GodotFarmingGame](#godotfarminggame)
   - [イントロダクション](#イントロダクション)
   - [目次](#目次)
+  - [ゲームの動画](#ゲームの動画)
   - [制作概要](#制作概要)
   - [ゲームの概要](#ゲームの概要)
 	- [ゲームサイクル](#ゲームサイクル)
@@ -16,7 +17,7 @@ Godotで農業ゲームを作成しました. 今後ゲームの要素が増え�
   - [特に参考になったもの](#特に参考になったもの)
 
 ## ゲームの動画
-[Farming Game]([https://www.youtube.com/watch?v=QPeycNt29tY&list=PLfcCiyd_V9GH8M9xd_QKlyU8jryGcy3Xa](https://drive.google.com/file/d/17dHHP2MMC8eP6jBfEGvuQiRzKGARN_Zx/view?usp=drive_link
+[Farming Game](https://drive.google.com/file/d/17dHHP2MMC8eP6jBfEGvuQiRzKGARN_Zx/view?usp=drive_link
 )
 
 ## 制作概要
