@@ -2,7 +2,7 @@
 
 ## イントロダクション
 Godotで農業ゲームを作成しました. 今後ゲームの要素が増えていっても大丈夫なようにプログラムの役割を明確にして, 各プログラムを独立させるように意識しました. また直感的に操作できるように少ないボタンで実装することと, UIを工夫しました. コントローラーでゲームを遊ぶのが好きなのでキーボードの入力のみで完結するようにしました.
-
+2分15秒のゲームの動画です
 ## 目次
 - [GodotFarmingGame](#godotfarminggame)
   - [イントロダクション](#イントロダクション)
@@ -15,6 +15,9 @@ Godotで農業ゲームを作成しました. 今後ゲームの要素が増え�
   - [使用したAsset](#使用したasset)
   - [特に参考になったもの](#特に参考になったもの)
 
+## ゲームの動画
+[Farming Game]([https://www.youtube.com/watch?v=QPeycNt29tY&list=PLfcCiyd_V9GH8M9xd_QKlyU8jryGcy3Xa](https://drive.google.com/file/d/17dHHP2MMC8eP6jBfEGvuQiRzKGARN_Zx/view?usp=drive_link
+)
 
 ## 制作概要
 - 制作期間: 1ヶ月
